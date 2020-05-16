@@ -1,0 +1,40 @@
+<div class = "ui centered card">
+<div class = "content">
+    <form class="ui form" method="POST" href="/users/register">
+        <div class="field">
+            <h2><center><i class="user plus icon"></i>&nbsp;Register</center></h2>
+        </div>
+        {{#if errors.length}}
+        {{#each errors}}
+            <div class="ui negative tiny message">
+                <i class="close icon"></i>
+                {{this.msg}}
+            </div>
+        {{/each}}
+        {{/if}}
+
+        <div class="field">
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Name" value={{name}}>
+        </div>
+        <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Email" value={{email}}>
+        </div>
+        <div class="field">
+            <label>Password</label>
+            <input type="text" name="psw" placeholder="Password" value={{psw}}>
+        </div>
+        <div class="field">
+            <label>Confirm Password</label>
+            <input type="text" name="psw2" placeholder="Confirm Password" value={{psw2}}>
+        </div>
+        <center>
+            <button class="ui negative button" type="submit">Register</button>
+        </center><br/>
+        <div class="field">
+            Already have an account? <a href="/users/login">Login</a>
+        </div>
+    </form>
+</div>
+</div>

@@ -1,0 +1,45 @@
+<div class = "ui centered card">
+<div class = "content">
+    <form class="ui form" method="POST" href="/users/login">
+        <div class="field">
+            <h2><center><i class="sign in alternate icon"></i>Login</center></h2>
+        </div>
+        {{#if success_msg}}
+           <div class="ui positive tiny message">
+                <i class="close icon"></i>
+                {{success_msg}}
+            </div>
+        {{/if}}
+        {{#if error_msg}}
+           <div class="ui negative tiny message">
+                <i class="close icon"></i>
+                {{error_msg}}
+            </div>
+        {{/if}}
+        {{#if error}} 
+           <div class="ui negative tiny message">
+                <i class="close icon"></i>
+                {{error}}
+            </div>
+        {{/if}}
+        <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Email">
+        </div>
+        <div class="field">
+            <label>Password</label>
+            <input type="text" name="psw" placeholder="Password">
+        </div>
+        <center>
+            <button class="ui teal button" type="submit">Login</button>
+            {{!-- <button class="ui facebook button">
+            <i class="facebook icon"></i>
+            Facebook
+            </button> --}}
+        </center><br/>
+         <div class="field">
+            No account? <a href="/users/register">Register</a>
+        </div>
+    </form>
+</div>
+</div>
